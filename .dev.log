@@ -10,3 +10,11 @@
  GET / 200 in 5454ms
  ○ Compiling /middleware ...
  ✓ Compiled /middleware in 526ms (313 modules)
+ ✓ Compiled /_not-found in 415ms (1325 modules)
+ GET / 404 in 805ms
+ GET / 200 in 721ms
+ GET / 200 in 594ms
+ GET / 200 in 615ms
+ ○ Compiling /shop ...
+ ✓ Compiled /shop in 1343ms (1349 modules)
+ GET /shop 200 in 1647ms
