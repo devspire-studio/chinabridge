@@ -12,15 +12,6 @@ import { cn } from "@/lib/cn";
 import { bdt } from "@/lib/format";
 import type { Category } from "@/lib/types";
 
-const SORTS = [
-  { value: "relevance", label: "Best match" },
-  { value: "popular", label: "Most ordered" },
-  { value: "price_asc", label: "Price: low to high" },
-  { value: "price_desc", label: "Price: high to low" },
-  { value: "rating", label: "Top rated" },
-  { value: "newest", label: "Newest arrivals" },
-];
-
 const TAGS = ["hot", "wholesale", "reseller", "budget", "gift", "industrial"];
 
 export function ShopFilters({ categories, brands, total }: { categories: Category[]; brands: string[]; total: number }) {
@@ -62,10 +53,10 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
     (current.featured ? 1 : 0);
 
   const panel = (
-    <div className="space-y-6">
+    <div className="space-y-6 py-4">
       <div>
-        <Label className="mb-2 block">Category</Label>
-        <div className="max-h-64 space-y-1 overflow-y-auto pr-1">
+        <Label className="mb-2 block px-4">Category</Label>
+        <div className="max-h-64 space-y-1 overflow-y-auto px-4">
           <button
             onClick={() => apply({ category: null })}
             className={cn(
@@ -93,7 +84,7 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
         </div>
       </div>
 
-      <div>
+      <div className="px-4">
         <Label className="mb-2 block">Price range (৳)</Label>
         <div className="flex items-center gap-2">
           <Input
@@ -130,7 +121,7 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
         </div>
       </div>
 
-      <div>
+      <div className="px-4">
         <Label className="mb-2 block">Brand</Label>
         <Select value={current.brand} onChange={(e) => apply({ brand: e.target.value })} className="h-9">
           <option value="">All brands</option>
@@ -142,7 +133,7 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
         </Select>
       </div>
 
-      <div>
+      <div className="px-4">
         <Label className="mb-2 block">Tags</Label>
         <div className="flex flex-wrap gap-1.5">
           {TAGS.map((tag) => {
@@ -166,7 +157,7 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
         </div>
       </div>
 
-      <div className="space-y-2">
+      <div className="px-4 space-y-2">
         <label className="flex items-center gap-2 text-sm text-slate-600">
           <Checkbox checked={current.inStock} onCheckedChange={(v) => apply({ inStock: v ? "1" : null })} />
           In stock only
@@ -182,9 +173,11 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
       </div>
 
       {activeCount > 0 && (
-        <Button variant="outline" className="w-full" onClick={() => router.push(`/shop${current.q ? `?q=${current.q}` : ""}`)}>
-          <X className="size-3.5" /> Clear {activeCount} filter{activeCount > 1 ? "s" : ""}
-        </Button>
+        <div className="px-4">
+          <Button variant="outline" className="w-full" onClick={() => router.push(`/shop${current.q ? `?q=${current.q}` : ""}`)}>
+            <X className="size-3.5" /> Clear {activeCount} filter{activeCount > 1 ? "s" : ""}
+          </Button>
+        </div>
       )}
     </div>
   );
@@ -192,7 +185,7 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
   return (
     <>
       <aside className="hidden w-64 shrink-0 lg:block">
-        <div className="sticky top-32 rounded-xl border border-slate-200 bg-white p-5">{panel}</div>
+        <div className="sticky top-32 rounded-xl border border-slate-200 bg-white  ">{panel}</div>
       </aside>
 
       <div className="flex flex-1 items-center justify-between gap-3 lg:hidden">
@@ -207,24 +200,7 @@ export function ShopFilters({ categories, brands, total }: { categories: Categor
             {panel}
           </SheetContent>
         </Sheet>
-        <SortSelect value={current.sort} onChange={(v) => apply({ sort: v })} />
-      </div>
-
-      <div className="hidden lg:block lg:w-44 lg:shrink-0">
-        <SortSelect value={current.sort} onChange={(v) => apply({ sort: v })} />
       </div>
     </>
-  );
-}
-
-function SortSelect({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  return (
-    <Select value={value} onChange={(e) => onChange(e.target.value)} className="h-9">
-      {SORTS.map((sort) => (
-        <option key={sort.value} value={sort.value}>
-          {sort.label}
-        </option>
-      ))}
-    </Select>
   );
 }

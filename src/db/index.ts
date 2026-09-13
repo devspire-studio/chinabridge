@@ -28,6 +28,40 @@ interface DbGlobal {
 const globalForDb = globalThis as unknown as { __chinabridgeDb?: DbGlobal };
 const state: DbGlobal = (globalForDb.__chinabridgeDb ??= {});
 
+// Load .env.local and .env if not already loaded (e.g. CLI scripts outside Next.js)
+function loadEnv() {
+  const envFiles = [".env.local", ".env"];
+  for (const file of envFiles) {
+    const fullPath = path.resolve(process.cwd(), file);
+    if (!fs.existsSync(fullPath)) continue;
+    try {
+      if (typeof process.loadEnvFile === "function") {
+        process.loadEnvFile(fullPath);
+      }
+    } catch {}
+
+    try {
+      const content = fs.readFileSync(fullPath, "utf-8");
+      for (const line of content.split(/\r?\n/)) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith("#")) continue;
+        const eqIdx = trimmed.indexOf("=");
+        if (eqIdx > 0) {
+          const key = trimmed.slice(0, eqIdx).trim();
+          let val = trimmed.slice(eqIdx + 1).trim();
+          if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+            val = val.slice(1, -1);
+          }
+          if (process.env[key] === undefined) {
+            process.env[key] = val;
+          }
+        }
+      }
+    } catch {}
+  }
+}
+loadEnv();
+
 export function dbDriver(): DbDriver {
   return process.env.DATABASE_URL ? "postgres" : "pglite";
 }

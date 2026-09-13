@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ArrowRight,
   BadgeCheck,
   Banknote,
   Boxes,
@@ -22,7 +21,7 @@ import {
   Sparkles,
   Truck,
   Users,
-  Warehouse,
+  Warehouse
 } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
@@ -516,3 +515,4 @@ export function StatsBand({ stats }: { stats: { label: string; value: string; hi
 }
 
 export { kg, numberFmt };
+

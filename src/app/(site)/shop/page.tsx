@@ -5,8 +5,9 @@ import { Suspense } from "react";
 
 import { ProductCard } from "@/components/site/product-card";
 import { ShopFilters } from "@/components/site/shop-filters";
-import { Breadcrumbs, EmptyState, Pagination } from "@/components/ui/data";
+import { ShopSortSelect } from "@/components/site/shop-sort-select";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs, EmptyState, Pagination } from "@/components/ui/data";
 import { getBrands, getCategoriesWithCounts, listProducts, type ProductFilters } from "@/server/queries";
 
 export const dynamic = "force-dynamic";
@@ -67,7 +68,8 @@ export default async function ShopPage({ searchParams }: { searchParams: Promise
             {result.total} products · landed cost shown with every card · {categories.length} categories
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
+          <ShopSortSelect />
           <Button variant="outline" size="sm" asChild>
             <Link href="/shipping-calculator">Shipping calculator</Link>
           </Button>

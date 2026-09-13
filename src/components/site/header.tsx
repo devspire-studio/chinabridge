@@ -20,10 +20,10 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import * as React from "react";
 
-import { CartDrawer } from "@/components/site/cart-drawer";
 import { useCart, useLocale } from "@/components/providers";
-import { Avatar } from "@/components/ui/data";
+import { CartDrawer } from "@/components/site/cart-drawer";
 import { Button } from "@/components/ui/button";
+import { Avatar } from "@/components/ui/data";
 import { Input } from "@/components/ui/fields";
 import {
   DropdownMenu,
@@ -35,7 +35,6 @@ import {
 } from "@/components/ui/overlays";
 import { authClient, signOut } from "@/lib/auth-client";
 import { cn } from "@/lib/cn";
-import { bdt } from "@/lib/format";
 import { isAdminRole } from "@/lib/roles";
 import type { Category } from "@/lib/types";
 
