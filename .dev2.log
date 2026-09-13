@@ -1,0 +1,201 @@
+   ▲ Next.js 15.5.25
+   - Local:        http://localhost:3011
+   - Network:      http://10.20.30.5:3011
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 5.8s (1332 modules)
+ GET / 200 in 8279ms
+ ○ Compiling /api/auth/[...all] ...
+ ✓ Compiled /api/auth/[...all] in 3s (1911 modules)
+ ⨯ [Error [BetterAuthError]: Invalid admin roles: super_admin, ops_manager, procurement, support, finance, content. Admin roles must be defined in the 'roles' configuration.] {
+  page: '/api/auth/sign-in/email'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1172ms (2244 modules)
+ POST /api/auth/sign-in/email 500 in 6835ms
+ ✓ Compiled in 1150ms (2260 modules)
+ POST /api/auth/sign-in/email 200 in 2301ms
+ ✓ Compiled /middleware in 479ms (313 modules)
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 6.4s (3365 modules)
+ GET /admin 200 in 7664ms
+ ○ Compiling /admin/reports ...
+ ✓ Compiled /admin/reports in 661ms (3304 modules)
+ GET /admin/reports 200 in 1487ms
+ ○ Compiling /admin/orders ...
+ ✓ Compiled /admin/orders in 722ms (3319 modules)
+ GET /admin/orders 200 in 1532ms
+ ○ Compiling /admin/quotes ...
+ ✓ Compiled /admin/quotes in 1121ms (3340 modules)
+ GET /admin/quotes 200 in 1632ms
+ ○ Compiling /admin/products ...
+ ✓ Compiled /admin/products in 719ms (3342 modules)
+ GET /admin/products 200 in 1217ms
+ ○ Compiling /admin/categories ...
+ ✓ Compiled /admin/categories in 711ms (3248 modules)
+ GET /admin/categories 200 in 1314ms
+ ○ Compiling /admin/customers ...
+ ✓ Compiled /admin/customers in 738ms (3250 modules)
+ GET /admin/customers 200 in 1294ms
+ ○ Compiling /admin/suppliers ...
+ ✓ Compiled /admin/suppliers in 726ms (3252 modules)
+ GET /admin/suppliers 200 in 1258ms
+ ○ Compiling /admin/purchase-orders ...
+ ✓ Compiled /admin/purchase-orders in 976ms (3254 modules)
+ GET /admin/purchase-orders 200 in 1455ms
+ ○ Compiling /admin/shipments ...
+ ✓ Compiled /admin/shipments in 791ms (3256 modules)
+ GET /admin/shipments 200 in 1332ms
+ ○ Compiling /admin/warehouses ...
+ ✓ Compiled /admin/warehouses in 898ms (3258 modules)
+ GET /admin/warehouses 200 in 1506ms
+ ○ Compiling /admin/payments ...
+ ✓ Compiled /admin/payments in 1373ms (3264 modules)
+ GET /admin/payments 200 in 2570ms
+ ○ Compiling /admin/wallet ...
+ ✓ Compiled /admin/wallet in 1056ms (3270 modules)
+ GET /admin/wallet 200 in 1987ms
+ ○ Compiling /admin/tickets ...
+ ✓ Compiled /admin/tickets in 1062ms (3272 modules)
+ GET /admin/tickets 200 in 1518ms
+ ○ Compiling /admin/reviews ...
+ ✓ Compiled /admin/reviews in 1167ms (3274 modules)
+ GET /admin/reviews 200 in 1672ms
+ ○ Compiling /admin/group-buys ...
+ ✓ Compiled /admin/group-buys in 1169ms (3276 modules)
+ GET /admin/group-buys 200 in 1637ms
+ ○ Compiling /admin/coupons ...
+ ✓ Compiled /admin/coupons in 1257ms (3278 modules)
+ GET /admin/coupons 200 in 1706ms
+ ○ Compiling /admin/cms/banners ...
+ ✓ Compiled /admin/cms/banners in 1794ms (3280 modules)
+ GET /admin/cms/banners 200 in 2623ms
+ ○ Compiling /admin/cms/posts ...
+ ✓ Compiled /admin/cms/posts in 2.2s (3282 modules)
+ GET /admin/cms/posts 200 in 3143ms
+ ○ Compiling /admin/staff ...
+ ✓ Compiled /admin/staff in 2.7s (3284 modules)
+ GET /admin/staff 200 in 3565ms
+ ○ Compiling /admin/audit ...
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\mdimr\OneDrive\Desktop\ai\importer\.next\cache\webpack\client-development\9.pack.gz_' -> 'C:\Users\mdimr\OneDrive\Desktop\ai\importer\.next\cache\webpack\client-development\9.pack.gz'
+ ✓ Compiled /admin/audit in 9.4s (3288 modules)
+ GET /admin/audit 200 in 10075ms
+ ○ Compiling /admin/settings ...
+ ✓ Compiled /admin/settings in 4.1s (3300 modules)
+ GET /admin/settings 200 in 4712ms
+ ○ Compiling /api/collections/[name] ...
+ ✓ Compiled /api/collections/[name] in 2.2s (3301 modules)
+ GET /api/collections/products?limit=1 200 in 4572ms
+ ○ Compiling /api/orders ...
+ ✓ Compiled /api/orders in 1352ms (3304 modules)
+ GET /api/orders?perPage=1 200 in 1625ms
+ ○ Compiling /admin/orders/[id] ...
+ ✓ Compiled /admin/orders/[id] in 2.1s (3320 modules)
+ GET /admin/orders/ord_2629 200 in 4030ms
+ POST /api/collections/coupons 400 in 66ms
+ ✓ Compiled in 1851ms (3308 modules)
+ POST /api/collections/coupons 201 in 213ms
+ GET /api/collections/coupons?q=TEST50 200 in 38ms
+ ○ Compiling /api/collections/[name]/[id] ...
+ ✓ Compiled /api/collections/[name]/[id] in 1182ms (2746 modules)
+ PATCH /api/collections/coupons/cpn_mtzon6lf 200 in 2429ms
+ POST /api/collections/posts 201 in 62ms
+ DELETE /api/collections/coupons/cpn_mtzon6lf 200 in 47ms
+ ○ Compiling /api/orders/[id] ...
+ ✓ Compiled /api/orders/[id] in 804ms (2738 modules)
+ GET /api/orders/ord_2629 200 in 2228ms
+ PATCH /api/orders/ord_2629 200 in 87ms
+ GET /api/collections/products?f_featured=true&limit=200 200 in 61ms
+ ○ Compiling /admin/orders ...
+ ✓ Compiled /admin/orders in 688ms (1538 modules)
+ GET /admin/orders?status=pending_payment 200 in 1629ms
+ GET /admin/orders?q=CB-252&paymentStatus=unpaid 200 in 219ms
+ GET /admin/orders?channel=rfq&mode=air_express 200 in 208ms
+ ✓ Compiled /admin/products in 498ms (1549 modules)
+ GET /admin/products?q=headphone 200 in 1098ms
+ GET /admin/audit?entity=order 200 in 226ms
+ ○ Compiling /admin/wallet ...
+ ✓ Compiled /admin/wallet in 1826ms (2082 modules)
+ GET /admin/wallet?type=topup 200 in 2784ms
+ ○ Compiling /admin/payments ...
+ ✓ Compiled /admin/payments in 571ms (2087 modules)
+ GET /admin/payments?method=bkash 200 in 1384ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1714ms (2147 modules)
+ GET / 200 in 2804ms
+ ○ Compiling /shop ...
+ ✓ Compiled /shop in 1533ms (3345 modules)
+ GET /shop 200 in 2141ms
+ ○ Compiling /cart ...
+ ✓ Compiled /cart in 1099ms (3358 modules)
+ GET /cart 200 in 1416ms
+ ○ Compiling /checkout ...
+ ✓ Compiled /checkout in 1688ms (3377 modules)
+ GET /checkout 200 in 2022ms
+ ○ Compiling /track ...
+ ✓ Compiled /track in 1094ms (3394 modules)
+ GET /track 200 in 1417ms
+ ○ Compiling /quote ...
+ ✓ Compiled /quote in 1245ms (3409 modules)
+ GET /quote 200 in 1636ms
+ ○ Compiling /group-buy ...
+ ✓ Compiled /group-buy in 1179ms (3421 modules)
+ GET /group-buy 200 in 1718ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 1280ms (3427 modules)
+ GET /blog 200 in 1684ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.3s (3442 modules)
+ GET /login 200 in 2678ms
+ ○ Compiling /account ...
+ ✓ Compiled /account in 1721ms (3467 modules)
+ GET /account 200 in 2478ms
+ GET / 200 in 1231ms
+ GET / 200 in 671ms
+ GET / 200 in 770ms
+ ○ Compiling /ph ...
+ ✓ Compiled /ph in 1274ms (3457 modules)
+ GET /ph?seed=65w-gan-charger-a&label=Baseus&icon=%F0%9F%94%8C&tone=cyan 200 in 1414ms
+ GET /ph?seed=mini-projector-a&label=Magcubic&icon=%F0%9F%93%BD%EF%B8%8F&tone=amber 200 in 1414ms
+ GET /ph?seed=magnetic-wireless-powerbank-a&label=Anker&icon=%F0%9F%94%8B&tone=orange 200 in 1415ms
+ GET /login 200 in 481ms
+ ○ Compiling /api/auth/[...all] ...
+ ✓ Compiled /api/auth/[...all] in 1238ms (2223 modules)
+ GET /api/auth/get-session 200 in 50ms
+[2m2026-09-13T10:41:30.550Z[0m [31mERROR[0m [1m[Better Auth]:[0m Invalid origin: http://localhost:3011
+ POST /api/auth/sign-in/email 403 in 304ms
+ GET /login?redirect=%2Fadmin 200 in 333ms
+ GET /api/auth/get-session 200 in 42ms
+ GET /api/auth/get-session 200 in 52ms
+ ✓ Compiled in 1906ms (2828 modules)
+ GET /login?redirect=%2Fadmin 200 in 468ms
+ GET /login 200 in 514ms
+ GET /api/auth/get-session 200 in 241ms
+ GET / 200 in 1415ms
+ GET /api/auth/get-session 200 in 70ms
+ ○ Compiling /_not-found ...
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /_not-found in 6.4s (2769 modules)
+ GET /ph?seed=mini-pc-a&label=Beelink&icon=%F0%9F%92%BB&tone=teal 404 in 9273ms
+ GET /ph?seed=robotic-vacuum-a&label=Xiaomi&icon=%F0%9F%A4%96&tone=amber 404 in 9245ms
+ GET /ph?seed=air-fryer-a&label=Xiaomi&icon=%F0%9F%8D%B3&tone=rose 404 in 9251ms
+ GET / 200 in 5519ms
+ GET /api/auth/get-session 200 in 302ms
+ GET /api/auth/get-session 200 in 49ms
+ GET /login 200 in 411ms
+ GET /api/auth/get-session 200 in 76ms
+ POST /api/auth/sign-in/email 200 in 249ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 3.5s (2107 modules)
+ GET /login 200 in 1310ms
+ GET /admin 200 in 5498ms
+ GET /api/auth/get-session 200 in 96ms
+ GET /api/auth/get-session 200 in 94ms
+ GET /api/auth/get-session 200 in 79ms
+ ✓ Compiled in 1502ms (3361 modules)
+ GET /admin 200 in 926ms
+ GET /api/auth/get-session 200 in 104ms
+[?25h
